@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Users = ({users}) => {
+const Users = ({users}) => {
 
     console.log('users length:::', users.length)
     if (users.length === 0) return null
@@ -38,3 +38,4 @@ export const Users = ({users}) => {
         </div>
     )
 }
+export default Users;

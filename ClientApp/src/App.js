@@ -5,9 +5,9 @@ import './custom.css'
 import {getAllUsers, createUser} from './services/UserService';
 import UserForm from './components/UserForm'
 import { DisplayBoard } from './components/DisplayBoard';
-import UsersTable from './components/UsersTable'
+import  Users  from './components/UsersTable'
 
-export default class App extends Component {
+class App extends Component {
   static displayName = "First React App.";
 
   state = {
@@ -42,7 +42,7 @@ export default class App extends Component {
 
   getAllUsers = () => {
     getAllUsers()
-    .this(users => {
+    .then(users => {
       this.setState({users: users, numberOfUsers: users.length})
     });
   }
@@ -69,7 +69,11 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+        <div className="row mrgnbtm">
+          <Users users={this.state.users}></Users>
+        </div>
       </div>  
     );
   }
 }
+export default App;

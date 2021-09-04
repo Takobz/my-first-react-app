@@ -1,7 +1,6 @@
 import React from 'react'
 
-//creates form given two props
-const CreateUser = ({onChangeForm, createUser}) => {
+const UserForm = ({onChangeForm, createUser}) => {
 
     return(
         <div className="container">
@@ -32,4 +31,4 @@ const CreateUser = ({onChangeForm, createUser}) => {
         </div>
     );
 }
-export default CreateUser
+export default UserForm
